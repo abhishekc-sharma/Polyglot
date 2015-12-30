@@ -1,5 +1,5 @@
 {
-  "name": "polygot",
+  "name": "polyglot",
   "version": "0.1.0",
   "description": "A library to identify the programming language of a source file.",
   "main": "dist/index.js",
