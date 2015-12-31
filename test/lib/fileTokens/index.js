@@ -6,7 +6,7 @@ test('should fail on attempt to read tokens for invalid file', t => {
 })
 
 test('should properly read tokens for .c files', t => {
-  return fileTokens(__dirname + '/hello.c', 'c')
+  return fileTokens(__dirname + '/../../samples/hello.c', 'c')
     .then(function({keywords, identifiers}) {
       t.true(identifiers.has('main'));
       t.is(keywords.get('return'), 1);
@@ -16,7 +16,7 @@ test('should properly read tokens for .c files', t => {
 });
 
 test('should properly read tokens for .cpp files', t => {
-  return fileTokens(__dirname + '/hello.cpp', 'cpp')
+  return fileTokens(__dirname + '/../../samples/hello.cpp', 'cpp')
     .then(function({keywords, identifiers}) {
       t.true(identifiers.has('main'));
       t.is(keywords.get('return'), 1);
@@ -29,7 +29,7 @@ test('should properly read tokens for .cpp files', t => {
 });
 
 test('should properly read tokens for .java files', t => {
-  return fileTokens(__dirname + '/Hello.java', 'java')
+  return fileTokens(__dirname + '/../../samples/Hello.java', 'java')
     .then(function({keywords, identifiers}) {
       t.true(identifiers.has('main'));
       t.true(identifiers.has('args'));
@@ -42,7 +42,7 @@ test('should properly read tokens for .java files', t => {
 });
 
 test('should properly read tokens for .js files', t => {
-  return fileTokens(__dirname + '/hello.js', 'javascript')
+  return fileTokens(__dirname + '/../../samples/hello.js', 'javascript')
     .then(function({keywords, identifiers}) {
       t.false(identifiers.has('main'));
       t.false(identifiers.has('args'));
