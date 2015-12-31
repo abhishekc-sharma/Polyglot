@@ -7,7 +7,7 @@
     "lint": "eslint lib/**",
     "prepublish": "babel lib --out-dir=dist",
     "test": "npm run lint && npm run prepublish && nyc ava test/**/index.js",
-    "start": "node dist/index"
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "polygot",
@@ -30,7 +30,6 @@
     "babel-eslint": "^4.1.6",
     "babel-plugin-transform-async-to-generator": "^6.3.13",
     "babel-preset-es2015-node5": "^1.1.1",
-    "coveralls": "^2.11.6",
     "eslint": "^1.10.3",
     "eslint-plugin-babel": "^3.0.0",
     "nyc": "^5.0.1"
